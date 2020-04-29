@@ -1,3 +1,0 @@
-#!/bin/bash
-sed -i '.bak' "s/.*define VERSION_COUNT_FUTURERESTORE.*/#define VERSION_COUNT_FUTURERESTORE \"$(git rev-list --count HEAD)\"/" ./futurerestore/config.h 2>/dev/null || sed -i "s/.*VERSION_COUNT_FUTURERESTORE.*/#define VERSION_COUNT_FUTURERESTORE \"$(git rev-list --count HEAD)\"/" ./futurerestore/config.h 2>/dev/null
-sed -i '.bak' "s/.*define VERSION_SHA_FUTURERESTORE.*/#define VERSION_SHA_FUTURERESTORE \"$(git rev-parse HEAD)\"/" ./futurerestore/config.h 2>/dev/null || sed -i "s/.*VERSION_SHA_FUTURERESTORE.*/#define VERSION_SHA_FUTURERESTORE \"$(git rev-parse HEAD)\"/" ./futurerestore/config.h 2>/dev/null
