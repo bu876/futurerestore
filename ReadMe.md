@@ -1,3 +1,11 @@
+This futurerestore build is patched for the restore of custom iPSW on 64bit devices.
+Img4tool SHSH build identity checks are disabled, so it's possible to fakesign the iPSW using a shsh ticket for another iOS Version
+(for example: I fakesign my iOS 11.4.1 tethered custom iPSW using an APTicket/SHSH for iOS 12.4.6)
+
+To use it, set your device into pwnedDFU, load patched iBSS and iBEC using iRecovery and find out APNonce using igetnonce...
+Fetch a new APTicket using tsschecker for latest iOS Version with the nonce you grabbed with igetnonce.
+Run futurerestore and enjoy!
+
 # futurerestore
 _futurerestore is a hacked up idevicerestore wrapper, which allows manually specifying SEP and Baseband for restoring._
 
